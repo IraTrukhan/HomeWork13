@@ -1,29 +1,18 @@
-function returnNumberName(currentNumber){
-    switch (+currentNumber) {
-        case 0:
-          return('zero');
-        case 1:
-          return('one');
-        case 2:
-            return('two');
-        case 3:
-          return('three');
-        case 4:
-          return('four');
-        case 5:
-          return('five');
-        case 6:
-          return('six');
-        case 7:
-          return('seven');
-        case 8:
-          return('eight');
-        case 9:
-          return('nine');
-        default:
-          return false;
-      }
+const arrayNameNumbers = [
+'zero', 
+'one',
+'two',
+'three',
+'four',
+'five',
+'six',
+'seven',
+'eight',
+'nine'
+];
+function numberName(a, arr){
+  return (a >= 0 && a < 10) ? arr[a] : false;
 }
-let changeNumber = returnNumberName(prompt('Enter number', 0));
-console.log(changeNumber);
-changeNumber ? alert (changeNumber) : alert ('Error');
+
+let nameCurrentNumber = numberName(+prompt('Enter number', 0), arrayNameNumbers);
+nameCurrentNumber ? alert (nameCurrentNumber) : alert ('Error');
